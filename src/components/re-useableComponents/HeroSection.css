@@ -1,0 +1,18 @@
+.main-div{
+    background-image: url('../../assets/images/monika-borys-4WNQAXL6tOU-unsplash.jpg');
+    background-repeat: no-repeat;
+   background-size: cover;
+   height: 400px;
+}
+
+h1{
+    color: black;
+}
+
+.hero-text{
+    padding-top: 15%;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 72.61px;
+}
