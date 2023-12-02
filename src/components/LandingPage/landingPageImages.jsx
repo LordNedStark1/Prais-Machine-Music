@@ -1,0 +1,1 @@
+export {default as ILiveInYou} from  '../../assets/images/african-woman-singing-while-listening-music-headphones-isolated-grey-background-copy-space_613652-440-veed-remove-background.png'
