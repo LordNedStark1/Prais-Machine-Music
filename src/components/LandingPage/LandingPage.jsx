@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './LandingPage.css'
-import {ILiveInYou} from './landingPageImages'
+import {ILiveInYou, faceBookIcon, whatsAppIcon, youtubeIcon, linkedInIcon} from './landingPageImages'
 import WorshipSongCard from '../ReusableComponents/WorshipSongCard'
 import { useState } from 'react'
 
@@ -13,6 +13,15 @@ const LandingPage = () => {
     "subject": "",
     "message": ""
   })
+  const handleEmailChange = (e)=>{
+    setEmailObject({...emailObj, [e.target.name]: e.target.value})
+  }
+  const onEmailSubmit =(e)=>{
+    e.preventDefault()
+    console.log(emailObj);
+    
+
+  }
 
   return (
     <div className='main-container'>
@@ -40,42 +49,68 @@ const LandingPage = () => {
      </div>
       <div className='contact-info'>
         <div className="form-div">
-        <form>
+        <form onSubmit={onEmailSubmit}>
           <input 
           type='text'
           placeholder='First Name'
+          value={emailObj.firstName}
+          name='firstName'
+          onChange={handleEmailChange}
           />
           <input 
           type='text'
           placeholder='Last Name'
+          value={emailObj.lastName}
+          name='lastName'
+          onChange={handleEmailChange}
           />
           <input 
           type='email'
           placeholder='email'
+          value={emailObj.email}
+          name='email'
+          onChange={handleEmailChange}
           />
           <input 
           type='text'
           placeholder='subject'
+          value={emailObj.subject}
+          name='subject'
+          onChange={handleEmailChange}
           />
-          <textarea/>
+          <textarea 
+          name='message'
+          cols={30}
+          rows={5}
+          ></textarea>
+
+          <button type='submit'>
+          {/* <a href="mailto:`{email}`?subject={subject}&body={body}">Click to Send an Email</a> */}
+          Submit</button>
         </form>
         </div>
         
         <div className='other-contact-links'>
+          
           <ul>
+          <div className='orange-circle'>
             <li>
-              <a href="https://www.google.com/"><button>Visit google</button></a>
+              <a href="https://www.google.com/"><button className='icon-image-button'><img className='icon-image' src={linkedInIcon} alt=''/><p>Visit linked in</p></button></a>
             </li>
+            </div>
             <li>
-              <a href="https://www.google.com/"><button>Visit FaceBook</button></a>
+              <a href="https://www.google.com/"><button className='icon-image-button'><img className='icon-image' src={linkedInIcon} alt=''/><p>Visit linked in</p></button></a>
+             </li>
+          <div className='orange-circle'>
+            <li>
+              <a href="https://www.google.com/"><button className='icon-image-button'><img className='icon-image' src={linkedInIcon} alt=''/><p>Visit linked in</p></button></a>
             </li>
+          </div>
             <li>
-              <a href="https://www.google.com/"><button>Visit Instagram</button></a>
-            </li>
-            <li>
-              <a href="https://www.google.com/"><button>Visit whats app</button></a>
+              <a href="https://www.google.com/"><button className='icon-image-button'><img className='icon-image' src={linkedInIcon} alt=''/><p>Visit linked in</p></button></a>
             </li>
           </ul>
+          <div className='orange-circle'></div>
         </div>
       </div>
     </div>

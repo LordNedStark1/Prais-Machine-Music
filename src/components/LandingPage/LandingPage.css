@@ -64,9 +64,7 @@
     font-size: 18px;
 
 }
-.worship-song-card{
 
-}
 .worship-card-image{
     height: 245px;
     width: 345px;
@@ -115,4 +113,19 @@
 .other-contact-links ul li{
     list-style: none;
     margin-bottom: 30px;
+}
+.icon-image{
+    height: 35px;
+    width: 35px;
+}
+.icon-image-button{
+    display: flex;  
+    height: 35px;
+}
+.orange-circle{
+    border-radius: 100%;
+    border: none;
+    background-color: rgba(212, 133, 104, 0.2);
+    height: 145px;
+    width: 145px;
 }
