@@ -30,7 +30,7 @@ const LandingPage = () => {
         <div className='header-image'></div>
         <div className="middle-bubble"></div>
         <div className='header-text-div'>
-          <h1>Praise Machine Music</h1>
+          <h1>PraiseMachineMusic</h1>
           <p>Call to action</p>
           <button>Play Now</button>
         </div>
