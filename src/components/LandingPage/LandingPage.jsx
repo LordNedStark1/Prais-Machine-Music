@@ -5,7 +5,7 @@ import {ILiveInYou, nextLevel, PraiseMAchineMusicLogo, faceBookIcon, whatsAppIco
 import WorshipSongCard from '../ReusableComponents/WorshipSongCard'
 import { useState } from 'react'
 
-import lottie from 'lottie-web';
+import lottie from 'lottie-web';  
 import NavBar from '../navBar/NavBar'
 
 const LandingPage = () => {
@@ -51,8 +51,8 @@ const LandingPage = () => {
   const contactInfo = () =>{
     return (
       <div className='contact-info' id='contact-info'>
-        <p> You can always share your thoughts, testimonies and also show interest in being part of Gods work in any way you can by simply filling the form below and expressing yourself in the nessage box. The lord bless you</p>
         <div className="form-div">
+        <p> You can always share your thoughts, testimonies and also show interest in being part of Gods work in any way you can by simply filling the form below and expressing yourself in the nessage box. The lord bless you</p>
         <form onSubmit={onEmailSubmit}>
           <input 
           type='text'
@@ -104,13 +104,13 @@ const LandingPage = () => {
               <a href="https://www.linkedin.com/in/osisiogu-augustus-964b23279/" target='_blank'><button className='icon-image-button'><img className='icon-image' src={linkedInIcon} alt=''/><p>Visit linked in</p></button></a>
             </li>
             <li>
-              <a href=""><button className='icon-image-button'><img className='icon-image' src={faceBookIcon} alt=''/><p>find me on facebook </p></button></a>
+              <a href="https://facebook.com"><button className='icon-image-button'><img className='icon-image' src={faceBookIcon} alt=''/><p>find me on facebook </p></button></a>
              </li>
             <li>
               <a href="+234 701 369 6506"><button className='icon-image-button'><img className='icon-image' src={whatsAppIcon} alt=''/><p className='icon-ptag'> chat me on whats app</p></button></a>
             </li>
             <li>
-              <a href=""><button className='icon-image-button'><img className='icon-image' src={youtubeIcon} alt=''/><p>subscribe to my youtube</p></button></a>
+              <a href="https://youtube.com"><button className='icon-image-button'><img className='icon-image' src={youtubeIcon} alt=''/><p>subscribe to my youtube</p></button></a>
             </li>
           </ul>
         </div>
@@ -118,9 +118,6 @@ const LandingPage = () => {
     )
   }
 
-          // href='https://audiomack.com/praisemachinemusic-1/album/nextlevel-1'
-          // href= 'https://audiomack.com/praisemachinemusic-1/song/breathe-in-you'
-          // href='https://audiomack.com/praisemachinemusic-1/song/eleojo'
   return (
     <div className='main-container'>
      
@@ -171,7 +168,7 @@ const LandingPage = () => {
         </div>
      </div>
      <div className='contact-info-main-container'>
-      {contactInfo()}
+      {/* {contactInfo()} */}
      </div>
     </div>
   )
