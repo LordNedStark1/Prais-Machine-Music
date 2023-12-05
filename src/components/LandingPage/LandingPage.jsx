@@ -130,7 +130,8 @@ const LandingPage = () => {
         <div className="middle-bubble"></div>
         <div className='header-text-div'>
           <h1>PraiseMachineMusic</h1>
-          <p>Join us as we worship God in spirit and in truth. Follow along in the worship.</p>
+          <p>Join us as we worship God in spirit and in truth. Follow along as we worship...</p>
+          <h3>Kabiyesi</h3>
           <button className='play-now-button' onClick={redirectToKaniyesiOnAudioMack}>Play Now</button>
         </div>
       </div>
