@@ -109,13 +109,13 @@
 
 .worship-card-image{
     height: 245px;
-    width: 295px;
+    width: 278px;
     margin-top: 15px;
     border-radius: 20px;
-    transition: height 0.3s ease, width 0.3s ease;
+    transition: height 0.7s ease, width 0.7s ease;
     &:hover {
-        height: 259px;
-        width: 300px;
+        height: 249px;
+        width: 270px;
       }
 }
 
@@ -175,13 +175,11 @@
     margin-top: 6px;
     width: 580px;
     gap: 10px;
-    /* background-color: #2F303A; */
     padding-bottom: 10px;
 }
 .message-text-area{
     margin-top: 15px;
     border-radius: 10px;
-
 }
 .other-contact-links{
     margin-top: 30px;
@@ -197,7 +195,6 @@
     list-style: none;
     margin-bottom: 20px;
     width: 190px;
-    /* background-color: #2F303A; */
 }
 .icon-image{
     height: 28px;
@@ -278,12 +275,17 @@
     }
   
     .worship-card-image {
-      width: 100%;
+    
+    
+        height: 230px;
+        width: 180px;
+        margin-top: 10px;
       
       transition: none;
       &:hover {
-        height: auto;
-        width: auto;
+        height: 235px;
+        width: 195px;
+        border-radius: 20px;
       }
     }
   

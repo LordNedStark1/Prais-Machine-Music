@@ -6,6 +6,7 @@ import WorshipSongCard from '../ReusableComponents/WorshipSongCard'
 import { useState } from 'react'
 
 import lottie from 'lottie-web';
+import NavBar from '../navBar/NavBar'
 
 const LandingPage = () => {
   const [emailObj , setEmailObject] = useState({
@@ -115,34 +116,13 @@ const LandingPage = () => {
     )
   }
 
-const navBar = () => {
-  const isSmallScreen = window.innerWidth <= 468; // Adjust the breakpoint as needed
-
-  return (
-    <div>
-      {isSmallScreen ? (
-        <h3 className="mobile-header">PraiseMachineMusic</h3>
-      ) : (
-        <div className='nav-bar'>
-          <h3>PraiseMachineMusic</h3>
-          <ul>
-            <li><a href="#new-release" className='custom-link'>kabiyesi</a></li>
-            <li><a href="#other-songs" className='custom-link'>Other songs</a></li>
-            <li><a href="#contact-info" className='custom-link'>Contact us</a></li>
-          </ul>
-          <button className='play-now-button' onClick={redirectToKaniyesiOnAudioMack}>Play Now</button>
-        </div>
-      )}
-    </div>
-  );
-};
-
           // href='https://audiomack.com/praisemachinemusic-1/album/nextlevel-1'
           // href= 'https://audiomack.com/praisemachinemusic-1/song/breathe-in-you'
           // href='https://audiomack.com/praisemachinemusic-1/song/eleojo'
   return (
     <div className='main-container'>
-      {navBar() }
+     
+      <NavBar/>
       <div className='header'>
         <div className='header-image'></div>
         <div className="middle-bubble"></div>
