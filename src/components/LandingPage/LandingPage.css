@@ -252,10 +252,10 @@
       height: 400px;
     }
   
-    /* .header-text-div h1 {
-      font-size: 48px;
-      width: 200px;
-    } */
+    .header-text-div h1 {
+      font-size: 38px;
+   
+    }
   
     .new-release {
       display: grid;   
