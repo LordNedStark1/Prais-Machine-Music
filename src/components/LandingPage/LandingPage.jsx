@@ -69,14 +69,14 @@ const LandingPage = () => {
           />
           <input 
           type='email'
-          placeholder='email'
+          placeholder='Email'
           value={emailObj.email}
           name='email'
           onChange={handleEmailChange}
           />
           <input 
           type='text'
-          placeholder='subject'
+          placeholder='Subject'
           value={emailObj.subject}
           name='subject'
           onChange={handleEmailChange}
@@ -84,6 +84,7 @@ const LandingPage = () => {
           <textarea 
           className='message-text-area'
           name='message'
+          placeholder='Message'
           cols={62}
           rows={4}
           ></textarea>
@@ -128,7 +129,7 @@ const LandingPage = () => {
         <div className="middle-bubble"></div>
         <div className='header-text-div'>
           <h1>PraiseMachineMusic</h1>
-          <p>Call to action</p>
+          <p>Join us as we worship God in spirit and in truth. Follow along in the worship.</p>
           <button className='play-now-button' onClick={redirectToKaniyesiOnAudioMack}>Play Now</button>
         </div>
       </div>
@@ -152,13 +153,13 @@ const LandingPage = () => {
           topImage={ILiveInYou} 
           h3Text={"Breathe In You"} 
           hrefLink={'https://audiomack.com/praisemachinemusic-1/song/breathe-in-you'}
-          pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
+          pTagText={"Lord, when I breathe I breathe in you, I live in you, you carry me. You are the air I, the hope of my life. Carry me lord"}/>
         
           <WorshipSongCard
           topImage={nextLevel} 
           h3Text={"Level's Change"} 
           hrefLink={'https://audiomack.com/praisemachinemusic-1/album/nextlevel-1'}
-          pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
+          pTagText={"Let's move to the next level with Jesus. When we love and serve God, he elevates us and sets us in higher place. Not by our power nor by our might, but by the grace of God we move higher"}/>
         
           <WorshipSongCard
           topImage={manOfWar} 
@@ -167,7 +168,7 @@ const LandingPage = () => {
           pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
         </div>
      </div>
-      {/* {contactInfo()} */}
+      {contactInfo()}
     </div>
   )
 }
