@@ -254,6 +254,10 @@
 @media only screen and (min-width: 601px) and (max-width: 1200px) {
     /* Adjust styles for screens between 601px and 1200px */
  
+    .mobile-navbar-h3{
+        font-size: 6px;
+        border: 2px solid red;
+    }
     .header-text-div {
         width: 100%;
       

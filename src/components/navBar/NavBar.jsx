@@ -19,10 +19,18 @@ const NavBar = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []); 
+  const myStyle = {
+    // color: 'white',
+    fontSize: '16px',
+    marginRight: '70px',
+  };
   return (
     <div>
       {isSmallScreen ? (
-        <h3 className="mobile-header">PraiseMachineMusic</h3>
+        <div className='nav-bar'>
+            <h3 className="mobile-navbar-h3" style={myStyle}>PraiseMachineMusic</h3>
+            <button className='play-now-button' onClick={redirectToKaniyesiOnAudioMack}>Play Now</button>
+        </div>
       ) : (
         <div className='nav-bar'>
           <h3>PraiseMachineMusic</h3>
