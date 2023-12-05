@@ -47,21 +47,35 @@ const LandingPage = () => {
     // Option 2: Using window.open
     window.open('https://audiomack.com/praisemachinemusic-1/song/kabiyesi', '_blank'); 
   };
-  
+
+const navBar = () => {
+  const isSmallScreen = window.innerWidth <= 468; // Adjust the breakpoint as needed
+
+  return (
+    <div>
+      {isSmallScreen ? (
+        <h3 className="mobile-header">PraiseMachineMusic</h3>
+      ) : (
+        <div className='nav-bar'>
+          <h3>PraiseMachineMusic</h3>
+          <ul>
+            <li><a href="#new-release" className='custom-link'>kabiyesi</a></li>
+            <li><a href="#other-songs" className='custom-link'>Other songs</a></li>
+            <li><a href="#contact-info" className='custom-link'>Contact us</a></li>
+          </ul>
+          <button className='play-now-button' onClick={redirectToKaniyesiOnAudioMack}>Play Now</button>
+        </div>
+      )}
+    </div>
+  );
+};
+
           // href='https://audiomack.com/praisemachinemusic-1/album/nextlevel-1'
           // href= 'https://audiomack.com/praisemachinemusic-1/song/breathe-in-you'
           // href='https://audiomack.com/praisemachinemusic-1/song/eleojo'
   return (
     <div className='main-container'>
-        <div className='nav-bar'>
-          <h3>PraiseMachineMusic</h3>
-          <ul>
-            <li><a href="#about-kabiyesi" className='custom-link'>kabiyesi</a></li>
-            <li><a href="#about-kabiyesi" className='custom-link'>kabiyesi</a></li>
-            <li><a href="#about-kabiyesi" className='custom-link'>kabiyesi</a></li>
-          </ul>
-          <button className='play-now-button' onClick={redirectToKaniyesiOnAudioMack}>Play Now</button>
-          </div>
+      {navBar() }
       <div className='header'>
         <div className='header-image'></div>
         <div className="middle-bubble"></div>
@@ -71,7 +85,7 @@ const LandingPage = () => {
           <button className='play-now-button' onClick={redirectToKaniyesiOnAudioMack}>Play Now</button>
         </div>
       </div>
-      <div className='new-release'>
+      <div className='new-release' id='new-release'>
         <img src={kabiyesiOfficialImage} alt=''/>
         <div className='about-new-release' id='about-kabiyesi'>
           <h2>Ka bi yesi</h2>
@@ -81,7 +95,7 @@ const LandingPage = () => {
         </div>
       </div>
       <div className='about-praise-machine'>about the musician</div>
-      <div className='other-songs'>
+      <div className='other-songs' id='other-songs'>
         <div className="other-songs-h2-div">
           <h2>Discover the presence of God in worship</h2>
         </div>
@@ -106,7 +120,7 @@ const LandingPage = () => {
           pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
         </div>
      </div>
-      <div className='contact-info'>
+      <div className='contact-info' id='contact-info'>
         <div className="form-div">
         <form onSubmit={onEmailSubmit}>
           <input 
