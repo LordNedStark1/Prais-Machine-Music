@@ -1,7 +1,41 @@
 /* nav bar */
 .nav-bar{
     height: 55px;
+    display: flex;
 }
+.nav-bar ul li{
+    list-style: none;
+    font-size: 15px;
+    text-decoration: underline; 
+    
+    &:hover {
+        color: rgb(207, 191, 44); 
+        text-shadow: 3px 3px 36px rgba(231, 230, 148, 0.5);
+      }
+}
+.nav-bar ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+   margin-left: 30%;
+}
+/* MyComponent.css */
+
+.custom-link {
+    color: #fff; /* Default font color */
+    text-decoration: none; 
+  
+    /* Hover effect */
+    &:hover {
+      color: #b9a619; 
+      text-shadow: 3px 3px 36px rgba(231, 230, 148, 0.5);
+    }
+  
+    /* Click effect */
+    &:active {
+      color: #e08823; 
+    }
+  } 
 
 /* header */
 .header{
@@ -53,6 +87,7 @@
     justify-content: center;
     font-size: 27px;
     margin: 15px;
+  
 }
 .worship-song-card{
     height: 500px;
@@ -62,7 +97,14 @@
     margin-left: 65px ;
     padding-left: 25px;
     font-size: 18px;
+}
 
+.worship-song-card p, h3 {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+        color: #ebe091; 
+      }
 }
 
 .worship-card-image{
@@ -70,10 +112,18 @@
     width: 295px;
     margin-top: 15px;
     border-radius: 20px;
+    transition: height 0.3s ease, width 0.3s ease;
+    &:hover {
+        height: 259px;
+        width: 300px;
+      }
 }
 
 .worship-song-card-container{
     display: flex;
+}
+.song_card_a_tag{
+    text-decoration: none;
 }
 
 /* new-release */
@@ -178,3 +228,109 @@
     margin-top: 15px;
     font-size: 20px;
 }
+
+
+
+/* mobile responsiveness */
+/* MyComponent.css */
+
+/* Add a general style for mobile devices */
+@media only screen and (max-width: 600px) {
+    .nav-bar {
+      justify-content: center;
+    }
+  
+    .nav-bar ul {
+      margin-left: 0;
+    }
+  
+    .custom-link {
+      font-size: 14px;
+    }
+  
+    .header {
+      height: 400px;
+    }
+  
+    .header-text-div h1 {
+      font-size: 48px;
+      width: 200px;
+    }
+  
+    .new-release {
+      display: grid;   
+    }
+  
+    .new-release img {
+        width: 360px;
+      margin: -24px;
+      margin-bottom: 10px;
+    }
+  
+    .about-new-release {
+      width: 100%;
+      padding-left: 0;
+    }
+  
+    .worship-song-card {
+      width: 100%;
+      margin: 0;
+    }
+  
+    .worship-card-image {
+      width: 100%;
+      
+      transition: none;
+      &:hover {
+        height: auto;
+        width: auto;
+      }
+    }
+  
+    .contact-info {
+     display: grid;
+     justify-content: center;
+    }
+  
+    .form-div form input {
+      width: 100%;
+    }
+    
+    .other-contact-links {
+      margin: 0;
+      margin-top: 20px;
+      width: 100%;
+    }
+  
+    .other-contact-links ul li {
+      width: 100%;
+    }
+  
+    .icon-image-button {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .icon-image {
+      margin-bottom: 10px;
+    }
+  
+    .form-div {
+      width: 100%;
+    }
+  
+    .message-text-area {
+      width: 100%;
+    }
+  
+    .submit-button {
+      width: 100%;
+    }
+    .worship-song-card-container{
+        display: grid;
+    }
+  }
+  
+  
+  /* Rest of your existing styles... */
+  
