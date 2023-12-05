@@ -142,7 +142,7 @@ const LandingPage = () => {
           <button className='play-now-button' onClick={redirectToKaniyesiOnAudioMack}>Play Now</button>
         </div>
       </div>
-      <div className='about-praise-machine'>about the musician</div>
+      {/* <div className='about-praise-machine'>about the musician</div> */}
       <div className='other-songs' id='other-songs'>
         <div className="other-songs-h2-div">
           <h2>Discover the presence of God in worship</h2>
@@ -168,7 +168,7 @@ const LandingPage = () => {
           pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
         </div>
      </div>
-      {contactInfo()}
+      {/* {contactInfo()} */}
     </div>
   )
 }
