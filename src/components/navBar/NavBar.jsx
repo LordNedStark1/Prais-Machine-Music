@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import './YourComponent.css';
 
 const NavBar = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 390);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 505);
 
   const redirectToKaniyesiOnAudioMack= () => {
 
@@ -10,7 +10,7 @@ const NavBar = () => {
   };
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 390);
+      setIsSmallScreen(window.innerWidth <= 505);
     };
 
     window.addEventListener('resize', handleResize);

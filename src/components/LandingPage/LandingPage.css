@@ -228,8 +228,77 @@
 
 
 
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    /* Adjust styles for screens between 601px and 1200px */
+    .header-text-div {
+        width: 100%;
+      
+        /* background-image: url('../../assets/images/african-woman-singing-while-listening-music-headphones-isolated-grey-background-copy-space_613652-440-veed-remove-background.png'); */
+        background-repeat: no-repeat;
+      }
+      .header{
+        width: 100%;
+        height: 450px;
+    
+        display: flex;
+        background-color: #2F303A;
+        margin-bottom: 60px;
+    
+    }
+    .header h1{
+        font-size: 50px;
+    }
+    
+    .other-songs{
+        width: 100%;
+        height: 1800px;
+    
+    }
+    .worship-song-card-container{
+        display: grid;
+        justify-content: center;
+    }
+    .other-songs-h2-div{
+        display: grid;
+        justify-content: center;
+        font-size: 27px;
+        margin: 15px;
+      
+    }
+    .worship-song-card{
+        height: 500px;
+        width: 420px;
+        border-radius: 20px;
+        background-color: #333658;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+    
+    .worship-song-card p, h3 {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+            color: #ebe091; 
+          }
+    }
+    .worship-card-image{
+        height: 268px;
+        width: 368px;
+        margin-top: 15px;
+        border-radius: 50%;
+        transition: height 0.3s ease, width 0.3s ease;
+        &:hover {
+            height: 249px;
+            width: 270px;
+          }
+    }
+    .nav-bar {
+      /* Add any specific styles for larger screens */
+    }
+}
+
 /* mobile responsiveness */
-/* MyComponent.css */
+
 
 /* Add a general style for mobile devices */
 @media only screen and (max-width: 600px) {
@@ -248,12 +317,11 @@
     .header {
       height: 400px;
     }
-  
-    .header-text-div h1 {
-      font-size: 33px;
-   
+    .header h1{
+        font-size: 35px;
     }
-  
+    
+
     .new-release {
       display: grid;   
     }
@@ -270,15 +338,23 @@
     }
   
     .worship-song-card {
-      width: 100%;
-      margin: 0;
+      width: 60%;
+      margin-bottom: 31px;
+    }
+    .other-songs{
+        width: 100%;
+        height: 1790px;
+    
+    }
+    .worship-song-card-container{
+        display: grid;
+        justify-content: center;
     }
   
     .worship-card-image {
     
-    
-        height: 230px;
-        width: 180px;
+        height: 250px;
+        width: 250px;
         margin-top: 10px;
       
       transition: none;
@@ -318,19 +394,17 @@
     }
   
     .form-div {
-      width: 100%;
+      width: 80%;
     }
   
     .message-text-area {
-      width: 100%;
+      width: 80%;
     }
   
     .submit-button {
-      width: 100%;
+      width: 80%;
     }
-    .worship-song-card-container{
-        display: grid;
-    }
+  
   }
   
   
