@@ -51,6 +51,7 @@ const LandingPage = () => {
   const contactInfo = () =>{
     return (
       <div className='contact-info' id='contact-info'>
+        <p> You can always share your thoughts, testimonies and also show interest in being part of Gods work in any way you can by simply filling the form below and expressing yourself in the nessage box. The lord bless you</p>
         <div className="form-div">
         <form onSubmit={onEmailSubmit}>
           <input 
@@ -168,7 +169,9 @@ const LandingPage = () => {
           pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
         </div>
      </div>
-      {/* {contactInfo()} */}
+     <div className='contact-info-main-container'>
+      {contactInfo()}
+     </div>
     </div>
   )
 }
