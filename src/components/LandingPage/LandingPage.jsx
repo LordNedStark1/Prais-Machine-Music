@@ -47,6 +47,73 @@ const LandingPage = () => {
     // Option 2: Using window.open
     window.open('https://audiomack.com/praisemachinemusic-1/song/kabiyesi', '_blank'); 
   };
+  const contactInfo = () =>{
+    return (
+      <div className='contact-info' id='contact-info'>
+        <div className="form-div">
+        <form onSubmit={onEmailSubmit}>
+          <input 
+          type='text'
+          placeholder='First Name'
+          value={emailObj.firstName}
+          name='firstName'
+          onChange={handleEmailChange}
+          />
+          <input 
+          type='text'
+          placeholder='Last Name'
+          value={emailObj.lastName}
+          name='lastName'
+          onChange={handleEmailChange}
+          />
+          <input 
+          type='email'
+          placeholder='email'
+          value={emailObj.email}
+          name='email'
+          onChange={handleEmailChange}
+          />
+          <input 
+          type='text'
+          placeholder='subject'
+          value={emailObj.subject}
+          name='subject'
+          onChange={handleEmailChange}
+          />
+          <textarea 
+          className='message-text-area'
+          name='message'
+          cols={62}
+          rows={4}
+          ></textarea>
+          <br/>
+
+          <button className='submit-button' type='submit'>
+          {/* <a href="mailto:`{email}`?subject={subject}&body={body}">Click to Send an Email</a> */}
+          Submit</button>
+        </form>
+        </div>
+        
+        <div className='other-contact-links'>
+          <p> Visist my social media handles to connect with me. be a part of the experience, share your testimonies about what God has done in your life. Link up via</p>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/osisiogu-augustus-964b23279/" target='_blank'><button className='icon-image-button'><img className='icon-image' src={linkedInIcon} alt=''/><p>Visit linked in</p></button></a>
+            </li>
+            <li>
+              <a href=""><button className='icon-image-button'><img className='icon-image' src={faceBookIcon} alt=''/><p>find me on facebook </p></button></a>
+             </li>
+            <li>
+              <a href="+234 701 369 6506"><button className='icon-image-button'><img className='icon-image' src={whatsAppIcon} alt=''/><p className='icon-ptag'> chat me on whats app</p></button></a>
+            </li>
+            <li>
+              <a href=""><button className='icon-image-button'><img className='icon-image' src={youtubeIcon} alt=''/><p>subscribe to my youtube</p></button></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    )
+  }
 
 const navBar = () => {
   const isSmallScreen = window.innerWidth <= 468; // Adjust the breakpoint as needed
@@ -120,69 +187,7 @@ const navBar = () => {
           pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
         </div>
      </div>
-      <div className='contact-info' id='contact-info'>
-        <div className="form-div">
-        <form onSubmit={onEmailSubmit}>
-          <input 
-          type='text'
-          placeholder='First Name'
-          value={emailObj.firstName}
-          name='firstName'
-          onChange={handleEmailChange}
-          />
-          <input 
-          type='text'
-          placeholder='Last Name'
-          value={emailObj.lastName}
-          name='lastName'
-          onChange={handleEmailChange}
-          />
-          <input 
-          type='email'
-          placeholder='email'
-          value={emailObj.email}
-          name='email'
-          onChange={handleEmailChange}
-          />
-          <input 
-          type='text'
-          placeholder='subject'
-          value={emailObj.subject}
-          name='subject'
-          onChange={handleEmailChange}
-          />
-          <textarea 
-          className='message-text-area'
-          name='message'
-          cols={62}
-          rows={4}
-          ></textarea>
-          <br/>
-
-          <button className='submit-button' type='submit'>
-          {/* <a href="mailto:`{email}`?subject={subject}&body={body}">Click to Send an Email</a> */}
-          Submit</button>
-        </form>
-        </div>
-        
-        <div className='other-contact-links'>
-          <p> Visist my social media handles to connect with me. be a part of the experience, share your testimonies about what God has done in your life. Link up via</p>
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/in/osisiogu-augustus-964b23279/" target='_blank'><button className='icon-image-button'><img className='icon-image' src={linkedInIcon} alt=''/><p>Visit linked in</p></button></a>
-            </li>
-            <li>
-              <a href=""><button className='icon-image-button'><img className='icon-image' src={faceBookIcon} alt=''/><p>find me on facebook </p></button></a>
-             </li>
-            <li>
-              <a href="+234 701 369 6506"><button className='icon-image-button'><img className='icon-image' src={whatsAppIcon} alt=''/><p className='icon-ptag'> chat me on whats app</p></button></a>
-            </li>
-            <li>
-              <a href=""><button className='icon-image-button'><img className='icon-image' src={youtubeIcon} alt=''/><p>subscribe to my youtube</p></button></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      {/* {contactInfo()} */}
     </div>
   )
 }
