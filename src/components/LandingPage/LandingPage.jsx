@@ -7,8 +7,24 @@ import { useState } from 'react'
 
 import lottie from 'lottie-web';  
 import NavBar from '../navBar/NavBar'
+import WorshipSongCardSmallScreen from '../ReusableComponents/WorshipSongCardSmallScreen'
 
 const LandingPage = () => {
+  
+  const [isPhoneScreen, setPhoneScreen] = useState(window.innerWidth <= 509);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setPhoneScreen(window.innerWidth <= 505);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); 
+
   const [emailObj , setEmailObject] = useState({
     "firstName": "",
     "lastName": "",
@@ -40,6 +56,51 @@ const LandingPage = () => {
     console.log(emailObj);
     
 
+  }
+  const worshipCardSmallOrBigScreen = () =>{
+    if(isPhoneScreen){
+    return  <div className='worship-song-card-container'>
+                              
+              <WorshipSongCardSmallScreen 
+              topImage={ILiveInYou} 
+              h3Text={"Breathe In You"} 
+              hrefLink={'https://audiomack.com/praisemachinemusic-1/song/breathe-in-you'}
+              pTagText={"Lord, when I breathe I breathe in you, I live in you, you carry me. You are the air I, the hope of my life. Carry me lord"}/>
+            
+              <WorshipSongCardSmallScreen
+              topImage={nextLevel} 
+              h3Text={"Level's Change"} 
+              hrefLink={'https://audiomack.com/praisemachinemusic-1/album/nextlevel-1'}
+              pTagText={"Let's move to the next level with Jesus. When we love and serve God, he elevates us and sets us in higher place. Not by our power nor by our might, but by the grace of God we move higher"}/>
+            
+              <WorshipSongCardSmallScreen
+              topImage={manOfWar} 
+              h3Text={"Song Title"} 
+              hrefLink={"https://audiomack.com/praisemachinemusic-1/song/eleojo'"}
+              pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
+          </div>
+    }else{
+    return  <div className='worship-song-card-container'>
+                    
+                <WorshipSongCard 
+                topImage={ILiveInYou} 
+                h3Text={"Breathe In You"} 
+                hrefLink={'https://audiomack.com/praisemachinemusic-1/song/breathe-in-you'}
+                pTagText={"Lord, when I breathe I breathe in you, I live in you, you carry me. You are the air I, the hope of my life. Carry me lord"}/>
+              
+                <WorshipSongCard
+                topImage={nextLevel} 
+                h3Text={"Level's Change"} 
+                hrefLink={'https://audiomack.com/praisemachinemusic-1/album/nextlevel-1'}
+                pTagText={"Let's move to the next level with Jesus. When we love and serve God, he elevates us and sets us in higher place. Not by our power nor by our might, but by the grace of God we move higher"}/>
+              
+                <WorshipSongCard
+                topImage={manOfWar} 
+                h3Text={"Song Title"} 
+                hrefLink={"https://audiomack.com/praisemachinemusic-1/song/eleojo'"}
+                pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
+        </div>
+    }
   }
   const redirectToKaniyesiOnAudioMack= () => {
     // Option 1: Using window.location
@@ -146,26 +207,7 @@ const LandingPage = () => {
         <div className="other-songs-h2-div">
           <h2>Discover the presence of God in worship</h2>
         </div>
-        <div className='worship-song-card-container'>
-         
-          <WorshipSongCard 
-          topImage={ILiveInYou} 
-          h3Text={"Breathe In You"} 
-          hrefLink={'https://audiomack.com/praisemachinemusic-1/song/breathe-in-you'}
-          pTagText={"Lord, when I breathe I breathe in you, I live in you, you carry me. You are the air I, the hope of my life. Carry me lord"}/>
-        
-          <WorshipSongCard
-          topImage={nextLevel} 
-          h3Text={"Level's Change"} 
-          hrefLink={'https://audiomack.com/praisemachinemusic-1/album/nextlevel-1'}
-          pTagText={"Let's move to the next level with Jesus. When we love and serve God, he elevates us and sets us in higher place. Not by our power nor by our might, but by the grace of God we move higher"}/>
-        
-          <WorshipSongCard
-          topImage={manOfWar} 
-          h3Text={"Song Title"} 
-          hrefLink={"https://audiomack.com/praisemachinemusic-1/song/eleojo'"}
-          pTagText={"experience the power and presence of God as praise machine leads in worship touching the heart heart of God"}/>
-        </div>
+      {worshipCardSmallOrBigScreen()}
      </div>
      <div className='contact-info-main-container'>
       {/* {contactInfo()} */}

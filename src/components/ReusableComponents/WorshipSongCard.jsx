@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WorshipSongCard = ({topImage, h3Text, pTagText, hrefLink}) => {
+export default function WorshipSongCard ({topImage, h3Text, pTagText, hrefLink}) {
   return (
     // <div className="worship-songs-cards">
       
@@ -20,4 +20,5 @@ const WorshipSongCard = ({topImage, h3Text, pTagText, hrefLink}) => {
   )
 }
 
-export default WorshipSongCard
+
+
