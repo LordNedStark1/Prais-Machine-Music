@@ -1,6 +1,6 @@
 const WorshipSongCardSmallScreen = ({topImage, h3Text, pTagText, hrefLink}) => {
   const buttonStyle = {
-    width: "30%",
+    width: "50%",
     height: "7%",
     maxWidth:  "100%",
     color: "white",
