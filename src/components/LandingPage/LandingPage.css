@@ -234,6 +234,15 @@
 }
 
 @media only screen and (min-width: 100px) and (max-width: 600px) {
+  .worship-song-card{
+    height: 535px;
+    width: 320px;
+    border-radius: 20px;
+    background-color: #333658;
+    margin-left: 65px ;
+    padding-left: 25px;
+    font-size: 18px;
+}
     .worship-song-card-container{
         display: grid;
         justify-content: center;
@@ -266,7 +275,7 @@
         width: 100%;
       
         /* background-image: url('../../assets/images/african-woman-singing-while-listening-music-headphones-isolated-grey-background-copy-space_613652-440-veed-remove-background.png'); */
-        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
       }
       .header{
         width: 100%;
@@ -276,9 +285,14 @@
         background-color: #2F303A;
         margin-bottom: 60px;
 
-        background-image: url('../../assets/images/african-woman-singing-while-listening-music-headphones-isolated-grey-background-copy-space_613652-440-veed-remove-background.png');
-        background-repeat: no-repeat;
+        /* background-image: url('../../assets/images/african-woman-singing-while-listening-music-headphones-isolated-grey-background-copy-space_613652-440-veed-remove-background.png'); */
+        /* background-repeat: no-repeat; */
     }
+    .header-image{
+      /* margin-top: 130.5px;
+      width: 500px; */
+      background-image: none;
+  }
     .header h1{
         font-size: 50px;
     }
