@@ -35,8 +35,8 @@ const NavBar = () => {
         <div className='nav-bar'>
           <h3>PraiseMachineMusic</h3>
           <ul>
-            <li><a href="#new-release" className='custom-link'>kabiyesi</a></li>
-            <li><a href="#other-songs" className='custom-link'>Other songs</a></li>
+            <li><a href="#new-release" className='custom-link'>Kabiyesi</a></li>
+            <li><a href="#other-songs" className='custom-link'>Other Songs</a></li>
             {/* <li><a href="#contact-info" className='custom-link'>Contact us</a></li> */}
           </ul>
           <button className='play-now-button' onClick={redirectToKaniyesiOnAudioMack}>Play Now</button>
