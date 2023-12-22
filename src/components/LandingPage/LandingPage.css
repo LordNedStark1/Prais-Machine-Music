@@ -9,8 +9,8 @@
     text-decoration: underline; 
     
     &:hover {
-        color: rgb(207, 191, 44); 
-        text-shadow: 3px 3px 36px rgba(231, 230, 148, 0.5);
+        color: #e2edf8; 
+        text-shadow: 3px 3px 36px #cfe5f1;
       }
 }
 .nav-bar ul{
@@ -27,8 +27,8 @@
   
     /* Hover effect */
     &:hover {
-      color: #b9a619; 
-      text-shadow: 3px 3px 36px rgba(231, 230, 148, 0.5);
+      color: #d9edfa; 
+      text-shadow: 3px 3px 36px #d5eefc;
     }
   
     /* Click effect */
@@ -51,7 +51,7 @@
     height: 230px;
     width: 13px;
     border-radius: 100px;
-    background-color: #AA9D2D;
+    background-color: #1762A7;
     margin-right: 25px;
     margin-top: 70px;
 }
@@ -61,7 +61,6 @@
     background-image: url('../../assets/images/african-woman-singing-while-listening-music-headphones-isolated-grey-background-copy-space_613652-440-veed-remove-background.png');
     background-repeat: no-repeat;
 }
-
 
 .play-now-button{
     background-color: #1762A7;
